@@ -26,7 +26,7 @@ export const bangs = [
     s: "Microsoft Copilot",
     sc: "AI",
     t: "mscp",
-    u: "https://copilot.microsoft.com?q={{s}}",
+    u: "https://copilot.microsoft.com?q={{{s}}}",
   },
   {
     c: "Tech",
