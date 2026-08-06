@@ -10,6 +10,24 @@ export const bangs = [
     t: "t3",
     u: "https://www.t3.chat/new?q={{{s}}}",
   },
+  {   
+    c: "AI",
+    d: "www.perplexity.ai",
+    r: 0,
+    s: "Perplexity",
+    sc: "Perplexity",
+    t: "ppx",
+    u: "https://www.perplexity.ai/search/new?focus=internet&q={{{s}}}",
+  },
+   {
+    c: "AI",
+    d: "chatgpt.com",
+    r: 0,
+    s: "ChatGPT",
+    sc: "AI",
+    t: "cgpt",
+    u: "https://chatgpt.com?q={{{s}}}",
+  },
   {
     c: "Tech",
     d: "npmx",
@@ -42549,7 +42567,7 @@ export const bangs = [
     s: "Google Maps",
     sc: "Maps",
     t: "gm",
-    u: "https://google.com/maps/place/{{{s}}}",
+    u: "https://google.com/maps/search/{{{s}}}",
   },
   {
     c: "Online Services",
@@ -43152,7 +43170,7 @@ export const bangs = [
     s: "GOG.com",
     sc: "Games (general)",
     t: "gog",
-    u: "https://www.gog.com/games?search={{{s}}}",
+    u: "https://www.gog.com/games?query={{{s}}}",
   },
   {
     c: "Tech",
@@ -90507,7 +90525,7 @@ export const bangs = [
     s: "Real Time Trains",
     sc: "Tracking",
     t: "rtt",
-    u: "http://www.realtimetrains.co.uk/search/handler?type=basic&qs=true&search={{{s}}}",
+    u: "https://www.realtimetrains.co.uk/search/handler?qsearch={{{s}}}&type=detailed",
   },
   {
     c: "Entertainment",
@@ -122070,5 +122088,18 @@ export const bangs = [
     sc: "Online",
     t: "\u10d0\u10e1\u10e2\u10e0\u10dd",
     u: "http://astronet.ge/?s={{{s}}}",
+  },
+  {
+  c: "Search Engines",
+  d: "noai.duckduckgo.com",
+  s: "DuckDuckGo (No AI)",
+  t: "ddgnoai",
+  u: "https://noai.duckduckgo.com/?q={{{s}}}",
+},
+{
+      t: "gw",
+      u: "https://www.google.com/search?q={{{s}}}&udm=14",
+      s: "Google (Web Only)",
+      c: "Search Engines",
   },
 ];

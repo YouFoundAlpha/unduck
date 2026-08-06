@@ -7,26 +7,19 @@ function noSearchDefaultPageRender() {
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
       <div class="content-container">
         <h1>Und*ck</h1>
-        <p>DuckDuckGo's bang redirects are too slow. Add the following URL as a custom search engine to your browser. Enables <a href="https://duckduckgo.com/bang.html" target="_blank">all of DuckDuckGo's bangs.</a></p>
+        <p>DuckDuckGo's bang redirects are too slow. Add the following URL as a custom search engine. See the instructions for <a href="https://support.google.com/chrome/answer/95426?hl=en">Chromium-based browsers</a> or <a href="https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox#w_add-a-custom-search-engine-in-settings_2">Firefox</a>. Enables <a href="https://duckduckgo.com/bangs" target="_blank">all of DuckDuckGo's bangs.</a></p>
         <div class="url-container"> 
           <input 
             type="text" 
             class="url-input"
-            value="https://unduck.link?q=%s"
+            value="https://youfoundalpha.github.io/unduck?q=%s"
             readonly 
           />
           <button class="copy-button">
-            <img src="/clipboard.svg" alt="Copy" />
+            <img src="./clipboard.svg" alt="Copy" />
           </button>
         </div>
       </div>
-      <footer class="footer">
-        <a href="https://t3.chat" target="_blank">t3.chat</a>
-        •
-        <a href="https://x.com/theo" target="_blank">theo</a>
-        •
-        <a href="https://github.com/t3dotgg/unduck" target="_blank">github</a>
-      </footer>
     </div>
   `;
 
@@ -36,15 +29,15 @@ function noSearchDefaultPageRender() {
 
   copyButton.addEventListener("click", async () => {
     await navigator.clipboard.writeText(urlInput.value);
-    copyIcon.src = "/clipboard-check.svg";
+    copyIcon.src = "./clipboard-check.svg";
 
     setTimeout(() => {
-      copyIcon.src = "/clipboard.svg";
+      copyIcon.src = "./clipboard.svg";
     }, 2000);
   });
 }
 
-const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "g";
+const LS_DEFAULT_BANG = localStorage.getItem("default-bang") ?? "qw";
 const defaultBang = bangs.find((b) => b.t === LS_DEFAULT_BANG);
 
 function getBangredirectUrl() {
