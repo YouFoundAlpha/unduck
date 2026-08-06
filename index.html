@@ -24,7 +24,28 @@
       media="print"
       onload="this.media='all'"
     />
-    <script data-goatcounter="https://yfa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+ <script>
+  window.goatcounter = window.goatcounter || {};
+  window.goatcounter.no_onload = true;
+</script>
+<script data-goatcounter="https://yfa.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+  window.addEventListener('load', function () {
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get('q');
+
+    if (query) {
+      window.goatcounter.count({
+        path: '/unduck?q=' + encodeURIComponent(query),
+        event: true,
+      });
+    } else {
+      window.goatcounter.count({
+        path: location.pathname,
+      });
+    }
+  });
+</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unduck</title>
     <meta
